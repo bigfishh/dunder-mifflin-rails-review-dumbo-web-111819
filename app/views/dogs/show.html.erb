@@ -1,0 +1,19 @@
+<h1> <%= @dog.name %>'s Page </h1>
+<h2>Info</h2>
+<h3> Name: <%= @dog.name %> </h3>
+<h3> Breed: <%= @dog.breed %> </h3>
+<h3> Age: <%= @dog.age %> </h3>
+
+Employees
+
+<% Employee.all.select do |emp| %>
+<ul>
+     <% if (emp.dog_id == @dog.id) %>
+          <li>  <%= emp.first_name %> </li>
+     <% end %>
+</ul>    
+<% end %>
+
+
+
+
